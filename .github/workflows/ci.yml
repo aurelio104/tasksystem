@@ -11,12 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
+
+      - name: Dependencias nativas (pdf-parse / canvas)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            libcairo2-dev \
+            libpango1.0-dev \
+            libjpeg-dev \
+            libgif-dev \
+            librsvg2-dev
+
       - run: npm ci
       - run: npm run build
-      - run: test -f manual/ALL\ TASK\ CARDS\ MD80\ SEZ\ 01-02-18.pdf
+      - run: test -f "manual/ALL TASK CARDS MD80 SEZ 01-02-18.pdf"
       - run: npm run parse
       - run: test -f data/task-cards.json

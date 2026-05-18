@@ -7,11 +7,18 @@ Dashboard web para el manual **MD-80 Task Cards** (SEZ): filtrar tarjetas, naveg
 - Node.js 20+
 - Manual PDF en `manual/ALL TASK CARDS MD80 SEZ 01-02-18.pdf`
 
-## Instalación
+## Instalación automática
 
 ```bash
 git clone git@github.com:aurelio104/tasksystem.git
 cd tasksystem
+npm run setup    # instala, parsea PDF y compila
+npm run dev
+```
+
+O paso a paso:
+
+```bash
 npm install
 npm run parse
 npm run dev
