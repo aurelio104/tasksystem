@@ -26,6 +26,12 @@ npm run dev
 
 Abre [http://localhost:3847](http://localhost:3847).
 
+## Producción (Vercel)
+
+**https://tasksystem-eta.vercel.app**
+
+Despliegue automático al hacer push a `main` (repo conectado en Vercel).
+
 ## Scripts
 
 | Comando | Descripción |
