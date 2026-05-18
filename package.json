@@ -9,7 +9,8 @@
     "parse": "tsx src/scripts/parse-pdf.ts",
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
-    "setup": "bash scripts/setup.sh"
+    "setup": "bash scripts/setup.sh",
+    "vercel-build": "npm run parse && npm run build"
   },
   "dependencies": {
     "@napi-rs/canvas": "^1.0.0",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^22.10.2",
+    "@vercel/node": "^5.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   },

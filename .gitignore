@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.vercel
 data/task-cards.json
 .DS_Store
 *.log
